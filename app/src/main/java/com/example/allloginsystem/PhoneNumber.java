@@ -55,7 +55,7 @@ public class PhoneNumber extends AppCompatActivity {
                         if (code != null){
                            SMScode.setText(code);
                         }
-                        Log.e("PhoneNumber","onVerificationCompleted");
+                        Toast.makeText(PhoneNumber.this, "PhoneNumber"+"onVerificationCompleted",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
@@ -75,8 +75,7 @@ public class PhoneNumber extends AppCompatActivity {
                                            @NonNull PhoneAuthProvider.ForceResendingToken token) {
 
                         mVerificationId = verificationId;
-                        Toast.makeText(PhoneNumber.this, "varifi:send", Toast.LENGTH_SHORT).show();
-                        Log.e("PhoneNumber","onCodeSent");
+                        Toast.makeText(PhoneNumber.this, "PhoneNumber"+"onCodeSent",Toast.LENGTH_LONG).show();
                     }
                 });
     }
@@ -93,7 +92,7 @@ public class PhoneNumber extends AppCompatActivity {
                                 Toast.makeText(PhoneNumber.this, " Code Not Match", Toast.LENGTH_SHORT).show();
                             }
                         }
-                        Log.e("PhoneNumber","onComplete");
+                        Toast.makeText(PhoneNumber.this, "PhoneNumber"+"signInWithPhoneAuthCredential",Toast.LENGTH_LONG).show();
 
                     }
                 });
